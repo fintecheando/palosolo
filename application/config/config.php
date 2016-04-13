@@ -12,8 +12,8 @@ if (! defined('BASEPATH')) exit('No direct script access allowed');
  * |
  */
 
-$allowed_domains = array('reports', 'reports.fsmn.org');
-$default_domain  = 'reports.fsmn.org';
+$allowed_domains = array('reports', 'ingenian.mx');
+$default_domain  = 'ingenian.mx';
 
 if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE))
 {
