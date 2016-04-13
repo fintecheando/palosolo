@@ -1,0 +1,1383 @@
+@import "ui.all.css";
+
+
+.narrText {
+	padding: 3px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.handle { /*cursor:move*/
+	
+}
+
+body {
+	font-size: 14px;
+	font-family: tahoma, sans-serif;
+	margin: 10px;
+	padding: 10px;
+	padding-right: 15px;
+	padding-top: 0px;
+	transition: auto .25s ease;
+}
+
+#page {
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+.highlight {
+	padding: 2px;
+	width: 80%;
+}
+
+.hidden {
+	display: none;
+}
+
+.student_roster {
+	height: 85%;
+	overflow: auto;
+	width: 50%
+}
+
+/*
+loggedin style changes the background to make sure users can tell they are logged in.
+
+loggedout indicates the opposite.
+*/
+.loggedout {
+	font-size: 1.5em;
+	stext-align: center;
+	margin-top: -45px;
+	padding: 10px;
+	position: fixed;
+	left: 10%;
+	right: 10%;
+	width: auto;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.not-logged-in #main {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.loggedin {
+	position: absolute;
+	right: 10%;
+	float: right;
+	margin-top: -45px;
+	padding: 10px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.editForm {
+	width: 100%;
+	padding-top: 1%;
+}
+
+/*Login Form elements*/
+div.login {
+	position: relative;
+	padding: 2em 5em;
+	text-align: left;
+	margin: 0 auto;
+	margin-top: 3em;
+	display: block;
+	border-radius: 5px;
+	box-shadow: 4px 4px 11px #000;
+	/*height: 250px;
+	*/
+	width: 30em;
+}
+
+div.login.errors {
+	height: 300px;
+}
+
+#login_form {
+	margin-top: 3em;
+}
+
+div.login-inputs {
+	margin: auto;
+	width: 250px;
+}
+
+.login-inputs input[type="text"], .login-inputs input[type="password"],
+	.login-inputs input[type="email"] {
+	font-size: 1.2em;
+}
+
+div.error {
+	text-align: left;
+	margin: 10%;
+	padding: 2em 5em;
+	position: fixed;
+	top: 1%;
+	right: 25%;
+	left: 25%;
+	width: auto;
+	z-index: 1;
+	border-style: solid;
+	border-width: 1px;
+}
+
+div.error a {
+	text-decoration: underline;
+}
+
+div.error-text {
+	padding: 10px;
+	margin: 5px;
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 1px 1px 1px #f00;
+}
+
+div.login-title {
+	font-size: 1.5em;
+	text-align: center;
+	position: relative;
+	border-radius: 5px;
+	padding: 5px;
+	box-shadow: 1px 1px 1px #000;
+}
+
+#login_form .login-text, .reset-fields input, .reset-fields label {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px;
+}
+
+#password-resetter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 300px;
+}
+
+/* general notices */
+.alert, .message, .warning, .notice, .log {
+	padding: 15px;
+	margin-bottom: 20px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#message {
+	display: none;
+}
+
+#content .alert {
+	padding: 1em;
+}
+
+#new_popup {
+	display: none;
+	visibility: block;
+}
+
+/*general display elements */
+.content.inner {
+	margin-left: auto;
+	margin-right: auto;
+	width: 950px;
+	padding-top: 1em;
+}
+
+.page-list .student_list {
+	margin-left: 0;
+}
+
+/*student search elements*/
+div.result {
+	font-size: 1em;
+	position: absolute;
+	left: 200px;
+	max-height: 600px;
+	margin: 2%;
+	padding-right: 2%;
+	padding-left: 2%;
+}
+
+/*student list elements*/
+div.entry, div.list {
+	width: 60%;
+	text-indent: 2%;
+	height: 2ex;
+	padding: 2px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-left-width: 1px;
+	border-left-style: solid;
+}
+
+div.student {
+	position: absolute;
+}
+
+div.grade {
+	position: absolute;
+	font-weight: bold
+}
+
+div.teacher {
+	position: absolute;
+	left: 20%;
+}
+
+div.student-top {
+	position: absolute;
+}
+
+div.teacher-top {
+	position: absolute;
+	left: 20%;
+}
+
+div.narrative {
+	position: absolute;
+	left: 40%
+}
+
+/*form elements*/
+.label {
+	font-size: 1em;
+	font-weight: bold
+}
+
+/* form dimensions mainly defined here */
+.form {
+	position: absolute;
+	width: 70%;
+}
+
+.phrases {
+	font-size: .8em;
+	position: absolute;
+	overflow: scroll;
+	visibility: hidden;
+}
+
+.button, #advancedSearch, #searchForm fieldset, h2, h3, h4, h5,
+	.support-view legend, input[type="submit"], input[type="text"] {
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.button {
+	text-align: center;
+	position: static;
+	padding: .75em;
+	border: 1px solid black;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: normal;
+	transition: all .25s ease;
+	white-space: nowrap;
+}
+
+td .button, .row .button, .button.small {
+	padding-top: .25em;
+	padding-bottom: .25em;
+	font-size: .9em;
+}
+
+td .button {
+	padding: .35em inherit;
+}
+
+a, .button {
+	transition: all .25s ease;
+}
+
+#navigation input[type="text"] {
+	height: 18px;
+	border: 1px solid transparent;
+	border-radius: 0;
+	padding: .8em .5em;
+	font-size: 1em;
+}
+
+.unread {
+    margin-left: 5px;
+    border-radius: 100%;
+    padding:3px 3px;
+    border: none;
+    font-weight: bold;
+    width: auto;
+    display: inline-block;
+}
+
+.image_button {
+	display: inline;
+	margin-bottom: -5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+a.button {
+	text-decoration: none;
+}
+
+.button-box {
+	
+}
+
+.button-bar {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+ul.button-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+ul.button-list li {
+	display: inline-block;
+	padding: 0;
+}
+
+ul.button-list li .button {
+	margin: 0;
+}
+
+ul.button-list li .button.delete {
+	margin-left: 50px;
+	float: none;
+}
+
+.mini-buttons ul.button-list li .button {
+	margin: 0 1px;
+}
+
+.button-bar {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.button-bar ul.button-list li {
+	padding: 0;
+}
+
+.button-bar ul.button-list li .button {
+	margin: 0;
+	border-radius: 0;
+	padding: .75em;
+	border-left: 1px solid #666;
+}
+
+.button-bar ul.button-list li.first .button {
+	border-left: none;
+}
+
+.help {
+	
+}
+
+}
+textarea {
+	font-size: 1em;
+}
+
+.delete {
+	float: right;
+}
+
+.link.delete {
+	float: none;
+}
+
+label {
+	font-weight: bold;
+}
+
+legend {
+	font-weight: bold;
+}
+
+/* header page layout elements */
+#header {
+	padding: 0;
+	position: relative;
+	height: auto;
+}
+
+#page-title {
+	float: left;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#utility .button-box {
+	margin: 0;
+}
+
+#utility ul {
+	margin: 0;
+}
+
+#navigation {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	white-space: nowrap;
+	margin-bottom: .5em;
+}
+
+#navigation ul {
+	padding: 0;
+	margin: 0;
+}
+
+#utility {
+	float: right;
+	clear: right;
+}
+
+#utility p {
+	margin: 0em;
+}
+
+/* end header page layout elements */ /*main div layout elements */
+#main {
+	position: relative;
+	padding: 0 5em 2em 2em;
+}
+
+#content {
+	
+}
+
+#sidebar {
+	position: absolute;
+	font-size: 11px;
+	top: 1%;
+	left: 65%;
+	right: 10%;
+	width: 15%;
+	height: 100%;
+	overflow: auto;
+	display: none;
+	padding: 5px;
+	margin-left: 15px;
+	border-style: solid;
+	border-width: 1px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-moz-box-shadow: 3px 3px 4px #666;
+	-webkit-box-shadow: 3px 3px 4px #666;
+	box-shadow: 3px 3px 4px #666;
+}
+
+#sidebar h3 {
+	
+}
+
+#sidebar ol {
+	margin: 0 0 1em 0;
+	border-width: 2px;
+	border-style: solid;
+}
+
+#sidebar ul {
+	margin: 1em 0;
+	padding: 0;
+	list-style-type: disc;
+}
+
+#sidebar li {
+	list-style-type: disc;
+	margin: 0 0 0 15px;
+}
+
+/* end div layout elements */
+ul.search {
+	padding: 0;
+}
+
+.search li {
+	display: inline;
+	padding-left: 1em;
+	margin-left: 0em;
+}
+
+#yearSearch {
+	text-align: center;
+}
+
+input[type="text"].year, #yearEnd {
+	width: 3em;
+}
+
+input[type='text'].grade {
+	width: 2em;
+}
+
+#advancedSearch {
+	border-width: 1px;
+	border-style: solid;
+	margin-right: auto;
+	margin-left: auto;
+	width: 50%;
+	min-width: 500px;
+}
+
+#advancedSearch h5 {
+	font-size: 14px;
+	text-align: center;
+	margin: 2px;
+	padding: 2px;
+	border-width: 0;
+	background-color: transparent;
+}
+
+#advancedSearch h6 {
+	font-size: 13px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	border-width: 0;
+	background-color: transparent;
+}
+
+#advancedSearch  label {
+	padding-left: 2em;
+}
+
+#addConcept {
+	width: 800px;
+	left: 50px;
+	top: 122px;
+	position: absolute;
+	visibility: hidden;
+	padding: 25px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+div.phraseEntry {
+	position: static;
+	top: 25px;
+}
+
+div.rank div.phrase {
+	position: static;
+	right: 11em;
+	bottom: 12px;
+	float: right;
+}
+
+div.phrase {
+	position: static;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+}
+
+h2 {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: left;
+	position: relative;
+	border-style: solid;
+	border-width: 1px;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: 0;
+}
+
+h3, .support-view legend {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 1em 0;
+	border-style: solid;
+	border-width: 1px;
+}
+
+h4 {
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: left;
+	position: relative;
+	border-style: solid;
+	border-width: 1px;
+	margin: 0;
+}
+
+h5 {
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin: 0;
+}
+
+h3, h4, h5, .support-view legend {
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 5px;
+	padding-left: 0;
+}
+
+/*attendance values*/
+ol.attendance {
+	padding: 0;
+	margin: 0;
+	display: inline
+}
+
+li.attendance {
+	display: inline;
+	padding-left: .5em;
+	margin-left: .5em;
+	margin-top: .5em;
+	border-left: .01em solid black;
+	color: black
+}
+
+li.attendance:first-child {
+	padding-left: 0;
+	border-left: none;
+	margin-left: 0
+}
+
+.field {
+	margin-bottom: .5em;
+}
+/*column boxes (see attendance_list.inc.html)
+*/
+.columnbox {
+	width: 100%;
+}
+
+.quartercolumn {
+	width: 25%;
+	float: left;
+	padding-top: 5px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.fifthcolumn {
+	width: 20%;
+	float: left;
+}
+
+/* Editor for Student Info page */
+#editor {
+	height: 130px;
+	width: 380px;
+	left: 280px;
+	top: 100px;
+	position: absolute;
+	visibility: hidden;
+}
+
+.chartbox {
+	width: 100%;
+	height: 25px;
+}
+
+.chartcol20 {
+	width: 20%;
+	height: 100px;
+	float: left;
+}
+
+.chartcol15 {
+	width: 15%;
+	height: 100px;
+	float: left;
+}
+
+.chartcol12 {
+	width: 12.5%;
+	height: 100px;
+	float: left;
+}
+
+.charttop {
+	width: 100%
+}
+
+.chartbottom {
+	width: 100%;
+}
+
+img:hover {
+	cursor: pointer;
+}
+
+label {
+	font-weight: bold;
+}
+
+.spacer {
+	width: 25em;
+}
+
+.footnote {
+	font-size: .8em;
+	vertical-align: super;
+}
+
+.ui-accordion-content {
+	height: auto;
+}
+
+#searchForm fieldset {
+	border: 1px solid #eee;
+	margin: 5%;
+	box-shadow: 2px 2px 3px #999;
+	background-color: white;
+	border-radius: 3px;
+}
+
+#searchForm fieldset label {
+	font-weight: normal;
+}
+
+#searchForm fieldset legend {
+	padding: 6px;
+	border-radius: 3px;
+	box-shadow: 3px 3px 5px #999;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #eee;
+	background-color: #fff;
+}
+
+#search_list {
+	position: absolute;
+	display: none;
+	z-index: 1000;
+	padding: 10px;
+	padding-top: 0px;
+	-moz-box-shadow: 3px 3px 4px #666;
+	-webkit-box-shadow: 3px 3px 4px #666;
+	box-shadow: 3px 3px 4px #666;
+	max-height: 500px;
+	overflow: scroll;
+}
+
+table {
+	font-size: inherit;
+}
+
+table.list td {
+	padding: 5px;
+	border-width: 0px;
+	vertical-align: top;
+}
+
+table.list {
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border-collapse: collapse;
+	font-size: inherit;
+}
+
+table.list thead tr {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #000;
+}
+
+table.list thead tr th {
+	text-align: left;
+}
+
+table.grid th, table.grid td {
+	border-left: solid 1px #999;
+	border-right: solid 1px #999;
+	border-top: solid 1px #999;
+	vertical-align: middle;
+}
+
+table.grid thead tr.first th {
+	border-bottom: none;
+}
+
+table.grid tbody tr:last-child {
+	border-bottom: solid 1px #999;
+}
+
+table.files {
+	border-spacing: 5px;
+}
+
+table.files th {
+	
+}
+
+table.files td {
+	
+}
+
+table.files td.file-name {
+	width: 150px;
+}
+
+table.files td.file-description {
+	width: 275px;
+}
+table .button-box .button-list  {
+	white-space: nowrap;
+
+	}
+
+table .button-box ul.button-list {
+	
+	margin: 0;
+}
+
+table .button-box .button-list li a {
+}
+
+a.link, input.link, a {
+	text-decoration: none;
+}
+
+a.link:hover, input.link:hover {
+	cursor: pointer;
+}
+
+table.attendance {
+	border-spacing: 0px;
+	border: 1px #ccc solid;
+}
+
+table.attendance td, table.attendance th {
+	padding: 5px;
+	border-right: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+}
+
+table.attendance td:last-child, table.attendance th:last-child {
+	border-right: 0;
+}
+
+table.attendance tr:last-child td {
+	border-bottom: 0;
+}
+
+.attendance th {
+	text-align: left;
+	width: 150px;
+}
+
+.attendance th.a-grade {
+	width: auto;
+}
+.attendance th.a-class {
+	width: auto;
+}
+.attendance th.a-type{
+	width: auto;
+}
+.attendance th.a-subtype {
+	width: auto;
+}
+
+.attendance th.a-date {
+	width: 80px;
+}
+
+.attendance th.a-button {
+	width: 30px;
+}
+
+.attendance th.a-length {
+	width: auto;
+}
+
+.attendance th.a-note {
+	width: auto;
+}
+
+.support-view {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.support-view legend {
+	font-size: 1.25em;
+}
+
+.icon {
+	vertical-align: middle;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+fieldset.advanced div.advanced {
+	padding-left: 55px;
+}
+
+.search_fieldset {
+	width: 350px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: block;
+	position: relative;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	box-shadow: 3px 3px 5px #999;
+	border: 1px solid #ddd;
+}
+
+.search_fieldset legend {
+	font-size: 1.2em;
+}
+
+fieldset .button-box {
+	display: block;
+	float: right;
+	z-index: 1;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.student-row {
+	/*width: 500px;*/
+	padding-left: 5px;
+}
+
+.student-name {
+	font-weight: bold;
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.student-row .button-box {
+	padding-bottom: .5em;
+}
+
+#search_list .student-name {
+	padding-top: 0;
+}
+
+.button-box {
+	padding: 1px 0;
+}
+
+.button-list .link {
+	padding: 0 .5em;
+}
+
+ul.buttons {
+	list-style: none;
+	margin-left: -38px;
+}
+
+ul.buttons li {
+	display: inline;
+}
+
+#feedback-editor {
+	width: 30em;
+}
+
+#stuEmail {
+	width: 60%;
+}
+/*** BENCHMARK STYLES ***/
+table#benchmarks {
+	font-size: 1em;
+}
+
+td.benchmark-label {
+	width: 25em;
+}
+
+td input.benchmark-comment {
+	width: 25em;
+}
+
+tr.benchmark-header {
+	font-weight: bold
+}
+
+tr.benchmark-grade {
+	font-size: 1.25em;
+}
+
+tr.benchmark-term td:first-child {
+	padding-left: 10px;
+}
+
+tr.benchmark-category td:first-child {
+	padding-left: 15px;
+}
+
+tr.benchmark-row td {
+	border-bottom: 1px solid black;
+	vertical-align: top;
+}
+
+tr.benchmark-row td.benchmark-text {
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+tr.benchmark-row td.benchmark-info {
+	width: 150px;
+}
+
+#footer {
+	font-size: .8em;
+	width: 150px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+h4.ui-accordion-header {
+	padding: 4px;
+	padding-left: 30px;
+}
+
+.ui-widget {
+	font-size: 12px;
+}
+
+table.grade-chart {
+	margin-bottom: 1em;
+	font-size: inherit;
+}
+
+table.report-card, table.grade-chart {
+	border-collapse: collapse;
+}
+
+table.grade-chart tr {
+	
+}
+
+table.grade-chart th.assignment-edit {
+	vertical-align: top;
+	width: 70px;
+}
+
+table.grade-chart th, table.grade-chart td {
+	border: 1px solid black;
+}
+
+table.grade-chart td.grade-points {
+	text-align: center;
+}
+
+th.assignment-field {
+	vertical-align: top;
+	position: relative;
+}
+
+table.grade-chart thead tr:last-child th {
+	font-size: .85em;
+}
+
+.grade-report {
+	font-size: 12px !important;
+}
+
+.report-chart {
+	clear: both;
+}
+
+.report-body {
+	float: left;
+}
+
+.report-summary {
+	float: left;
+	max-width: 45%;
+	padding-left: .5em;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+th.buttons a, th div.buttons a, th .batch-print-grades {
+	width: 45px;
+	margin: 0 auto;
+	white-space: pre-wrap;
+	display: block;
+}
+
+table.grade-chart th .chart-assignment {
+	font-weight: bold;
+}
+
+table.grade-chart th .chart-category, table.grade-chart th .chart-points,
+	table.grade-chart th .chart-date {
+	font-weight: normal;
+}
+
+table.grade-chart th .chart-category {
+	font-style: italic;
+}
+
+table.grade-chart th.assignment-field {
+	font-size: .9em;
+	width: 80px;
+}
+
+table.grade-chart td {
+	padding: 4px 5px;
+}
+
+table.grade-chart th.chart-final-grade {
+	min-width: 90px;
+}
+/*
+div.assignment-button .button {
+	float: right;
+	margin-left: 10px;
+}
+*/
+table.grade-editor th.grade-total-points {
+	width: 25px;
+}
+
+table.grade-editor tbody tr td.grade-description {
+	padding: 0 5px;
+	border: 1px solid #bdbdbd;
+}
+
+table.grade-editor tbody tr td.grade-value {
+	border: 1px solid #bdbdbd;
+}
+
+table.grade-editor tbody tr td.grade-value input {
+	border: none;
+	min-width: 3em;
+}
+
+table.grade-editor thead tr th {
+	text-align: left;
+}
+
+table.grade-chart td.student-name {
+	min-width: 150px;
+}
+
+.grade-points.edit:hover, .assignment-edit:hover, td.student-name:hover
+	{
+	cursor: pointer;
+}
+
+table.report-card th, table.report-card td {
+	padding: 3px;
+	border: 1px solid black;
+}
+
+table.report-card .notes-column {
+	border: none;
+}
+
+.report-card h2 {
+	background: transparent;
+	box-shadow: none;
+}
+
+#orange-slip, #assignment-field textarea, #comment-field textarea {
+	width: 400px;
+}
+
+#parent-communication {
+	border: 1px solid #c6c6c6;
+	width: 400px;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+table.report td.field {
+	vertical-align: top;
+	border-bottom: 1px solid #c3c3c3;
+	min-width: 45px;
+	border-left: 1px solid #c3c3c3;
+}
+
+td.field.report-comment, td.field.report-assignment {
+	width: 150px;
+}
+
+td.field.report-parent-contact {
+	
+}
+
+td.field.report-contact-date, td.field.report-student {
+	border-right: 1px solid #c3c3c3;
+}
+
+table.report td.field.buttons, table.report th.field.buttons {
+	border: none;
+}
+
+#report-card {
+	
+}
+
+.report-title {
+	font-size: 1.6em;
+	font-weight: bold;
+	padding-top: 1em;
+}
+
+.report-header {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin: .25em 0 1em 0;
+}
+
+.report-cutoff {
+	font-size: 1.2em;
+	margin-top: 0;
+}
+
+.report-term {
+	font-size: 1.5em;
+	margin-bottom: 0;
+}
+
+.report-teacher {
+	font-size: 1.2em;
+}
+
+.report-teacher.report-0 {
+	
+}
+
+.report-summary {
+	
+}
+
+.footnotes {
+	padding: 10px 0;
+}
+
+.footnotes .caption {
+	font-weight: bold;
+}
+
+.footnotes ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.password-field {
+	display: none;
+}
+
+th.grade-confirmation {
+	width: 25px;
+}
+
+/** STUDENT VIEW LAYOUT **/
+#student-info {
+	float: left;
+	width: 40ex;
+}
+
+/*.fieldset {
+	border-radius: 3px 3px 3px 3px;
+	border-color: #eee;
+	background-color: #fff;
+	box-shadow: 1px 1px 1px #ccc;
+	position: relative;
+}*/
+.fieldset h4 {
+	
+}
+
+.column {
+	float: left;
+	width: 40%;
+	position: relative;
+	display: block;
+	box-shadow: 3px 3px 3px #999;
+	margin: .5em;
+	padding: .5em;
+	border: 1px solid #eee;
+	border-radius: 3px;
+}
+
+.column.even {
+	clear: left;
+	margin-right: .5em;
+}
+
+.column.odd {
+	clear: right;
+	margin-left: .5em;
+}
+
+.column-3 {
+	width: auto;
+}
+
+.class-listing.column-3 {
+	width: 1.75in;
+}
+
+.class-listing .row {
+	padding: .4em 0;
+	margin: 0 .2em;
+	border-bottom: 1px solid #000;
+}
+
+.class-listing .row.empty {
+	/*border: none;*/
+	
+}
+
+.classroom.header {
+	background-color: yellow;
+}
+
+.checklist p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+@media ( max-width : 736px ) {
+	
+	#navigation .button, #navigation input {
+	display: none;
+}
+
+#navigation .button.mobile, #navigation input.mobile {
+	display: inherit;
+}
+#navigation .button-list li {
+	display: block;
+}
+
+
+}
