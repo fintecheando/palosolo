@@ -90,7 +90,7 @@ class Student extends MY_Controller {
 		) );
 		$data ["target"] = "student/edit";
 		$data ["title"] = "Add a New Student";
-		$this->_view ( $data );
+		$this->_view($data);
 	}
 
 	/**
