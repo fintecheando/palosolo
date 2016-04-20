@@ -3,11 +3,10 @@
 <div class="login">
 <div class="login-title">Recuperar Clave</div>
 <form action="<?=site_url("auth/send_reset"); ?>" method="post" name="login_form" id="login_form">
-<?
-if($errors):
+<? if($errors):
 	if(is_array($errors)){
 		foreach($errors as $msg){
-			$output =" -$msg<br/>\n";
+                    $output=" -$msg <br/> \n";
 		}
 	}else{
 		$output ="$errors";

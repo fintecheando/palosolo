@@ -22,7 +22,7 @@ $body_classes[] = $this->uri->segment(1);
 <? if($_SERVER['HTTP_HOST'] == "reports"): ?>
 <div id="page-title">WARNING: THIS IS THE STAGING SERVER. CHANGES MADE HERE ARE IMAGINARY!</div>
 <? else: ?>
-<div id='page-title'>Friends School Student Information System</div>
+<div id='page-title'>Sistema de Administración Escolar Casa de los Niños de Palo Solo</div>
 <? endif;?>
 <div id="top-nav">
 <div id='utility'><? $this->load->view('page/utility');?></div>
