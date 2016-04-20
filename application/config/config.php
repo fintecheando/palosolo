@@ -12,8 +12,8 @@ if (! defined('BASEPATH')) exit('No direct script access allowed');
  * |
  */
 
-$allowed_domains = array('reports', 'ingenian.mx');
-$default_domain  = 'ingenian.mx';
+$allowed_domains = array('reports', 'palosolo.bitnamiapp.com');
+$default_domain  = 'palosolo.bitnamiapp.com';
 
 if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE))
 {

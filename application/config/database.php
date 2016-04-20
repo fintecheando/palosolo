@@ -47,8 +47,8 @@
 
 $active_group = 'default';
 $db['default']['hostname'] = "localhost";
-$db['default']['username'] = "palosolo";
-$db['default']['password'] = "gusana02";
+$db['default']['username'] = "root";
+$db['default']['password'] = "lS7pVurAcJ?S";
 $db['default']['database'] = "narrative";
 $db['default']['dbdriver'] = "mysqli";
 $db['default']['dbprefix'] = "";

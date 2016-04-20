@@ -3,9 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/home/victor/git/palosolo/application/config/database.php</file>
+            <file>file:/home/victor/git/palosolo/application/views/auth/login.php</file>
             <file>file:/home/victor/git/palosolo/application/config/autoload.php</file>
             <file>file:/home/victor/git/palosolo/application/config/config.php</file>
-            <file>file:/home/victor/git/palosolo/application/config/database.php</file>
+            <file>file:/home/victor/git/palosolo/application/views/auth/reset_password.php</file>
+            <file>file:/home/victor/git/palosolo/application/views/auth/request_reset.php</file>
+            <file>file:/home/victor/git/palosolo/application/controllers/Auth.php</file>
         </group>
     </open-files>
 </project-private>
