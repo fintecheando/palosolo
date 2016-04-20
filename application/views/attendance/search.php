@@ -10,6 +10,6 @@
 <?=form_dropdown("attendSubtype",$attendSubtypes, NULL, "id='attendSubtype'");?>
 </p>
 <p>
-<input type="submit" value="Search" class="button"/>
+<input type="submit" value="Buscar" class="button"/>
 </p>
 </form>

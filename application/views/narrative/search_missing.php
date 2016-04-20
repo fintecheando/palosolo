@@ -7,5 +7,5 @@
 <?=form_dropdown("subject", $subjects, $subject, "id='subject'"); ?>
 <br/>
 <p><label for="gradeStart">Grade Range: </label><?=form_dropdown("gradeStart", $grades, $gradeStart, "id='gradeStart'") . "-" . form_dropdown("gradeEnd", $grades, $gradeEnd, "id='gradeEnd'");?></p>
-<input type="submit" class="button" value="Search"/>
+<input type="submit" class="button" value="Buscar"/>
 </form>

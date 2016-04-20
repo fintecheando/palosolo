@@ -36,6 +36,6 @@ if(!$gradeEnd){
 </p>
 </div>
 <p>
-<input type="submit" value="Search" class="button"/>
+<input type="submit" value="Buscar" class="button"/>
 </p>
 </form>

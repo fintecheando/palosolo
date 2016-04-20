@@ -30,10 +30,10 @@ if($gradeStart == $gradeEnd){
 $userID = $this->session->userdata("userID");
 if($kTeach == $userID || $userID == ROOT_USER){
 
-	$edit_buttons[] = array("selection"=>"edit", "class"=>"button edit dialog","href"=>site_url("teacher/edit?kTeach=$kTeach"), "text"=>"Edit Info");
+	$edit_buttons[] = array("selection"=>"edit", "class"=>"button edit dialog","href"=>site_url("teacher/edit?kTeach=$kTeach"), "text"=>"Editar Informacion");
 
-	$edit_buttons[] = array("selection"=>"auth","class"=>array("button","dialog","edit"),"href"=>site_url("user/edit_password?kTeach=$kTeach"), "text"=>"Change Password");
-	$edit_buttons[] = array("selection"=>"preference", "text" => "Preferences", "href" => site_url("preference/view/$kTeach") );
+	$edit_buttons[] = array("selection"=>"auth","class"=>array("button","dialog","edit"),"href"=>site_url("user/edit_password?kTeach=$kTeach"), "text"=>"Cambiar Clave");
+	$edit_buttons[] = array("selection"=>"preference", "text" => "Preferencias", "href" => site_url("preference/view/$kTeach") );
 	if($userID == ROOT_USER && $kTeach != $userID){
 		$edit_buttons[] = array("selection" => "edit", "class" => "masquerade button","href" => site_url("/admin/masquerade/$kTeach"), "text" => "Masquerade" );
 	}
@@ -42,26 +42,26 @@ if($kTeach == $userID || $userID == ROOT_USER){
 
 }
 ?>
-<p><label>First Name: </label><? print $teacher->teachFirst; ?></p>
-<p><label>Last Name: </label><? print $teacher->teachLast; ?></p>
-<p><label>User Account Status: </label> <?php
+<p><label>Nombre: </label><? print $teacher->teachFirst; ?></p>
+<p><label>Apellido Paterno: </label><? print $teacher->teachLast; ?></p>
+<p><label>Estado de la Cuenta de Usuario: </label> <?php
 if($teacher->status==1){
-	print "Enabled";
+	print "Habilitado";
 }else{
-	print "Disabled";
+	print "Deshabilitado";
 }
 ?></p>
 <? //@TODO change the text version of dbRole to pull the menu variable value from the DB instead of hard coding these values ?>
 <p><label>Database Role: </label> <?php
 switch($teacher->dbRole){
 	case 1:
-		print "Administrator/Narrative Reviewer";
+		print "Administrador/Supervisor de Records";
 		break;
 	case 2:
-		print "Narrative Author";
+		print "Autor de Records";
 		break;
 	case 3:
-		print "Aide/Support Staff";
+		print "Personal Administrativo";
 		break;
 }
 

@@ -15,7 +15,7 @@ if($teacher->dbRole == 2 && $teacher->isAdvisor == 1){
 }
 $buttons[] = array("selection" =>"report/get_list/teacher","href"=>site_url("report/get_list/teacher/$kTeach"),"text"=> sprintf("Submitted %ss", STUDENT_REPORT));
 
-$buttons[] = array("selection"=>"teacher/view","text"=>"Account Info","href"=>site_url("teacher/view/$kTeach"));
+$buttons[] = array("selection"=>"teacher/view","text"=>"Información de la Cuenta","href"=>site_url("teacher/view/$kTeach"));
 
 $options["selection"] = $this->uri->segment(1);
 $options["id"] = "teacher-buttons";

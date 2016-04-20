@@ -30,9 +30,9 @@ if($isAdvisor){
 </p>
 
 <? if($this->session->userdata("dbRole") == 1 && $this->session->userdata("userID") == ROOT_USER){
-		echo "<p><label for='dbRole'>User Role</label>";
+		echo "<p><label for='dbRole'>Rol de Usuario</label>";
 		echo form_dropdown('dbRole', $dbRoles, get_value($teacher,'dbRole'), 'id="dbRole"');
-		echo "</p><p><label for='status'>User Status</label>";
+		echo "</p><p><label for='status'>Estado del Usuario</label>";
 		echo form_dropdown('status', $userStatus, get_value($teacher,'status'), 'id="status"');
 		echo "</p>";
 	
@@ -61,5 +61,5 @@ if($isAdvisor){
 </fieldset>
 <? endif;?>
 	<p>
-	<input type="submit" class='button save_teacher' value="Save"/></p>
+	<input type="submit" class='button save_teacher' value="Guardar"/></p>
 </form>
