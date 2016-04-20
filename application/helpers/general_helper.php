@@ -235,7 +235,7 @@ function get_teacher_type($grade)
 	if ($grade == "K") {
 		$grade = 0;
 	}
-	$teacherType = "Classroom Teacher";
+	$teacherType = "Guia Montessori";
 	if ($grade > 4) {
 		$teacherType = "Middle School Advisor";
 	}

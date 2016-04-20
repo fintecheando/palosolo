@@ -27,7 +27,7 @@ if(array_key_exists("grades", $criteria)){
     <?endif;?>
     
     <?php if(array_key_exists("kTeach",$criteria)):?>
-    <li>Classroom Teacher or Advisor: <strong><?php echo $criteria['teacher']; ?></strong></li>
+    <li>Guia Montessori: <strong><?php echo $criteria['teacher']; ?></strong></li>
     <?php endif; ?>
         <?php if(array_key_exists("humanitiesTeacher",$criteria)):?>
     <li>Humanities Teacher: <strong><?php echo $criteria['humanitiesName'];?></strong></li>

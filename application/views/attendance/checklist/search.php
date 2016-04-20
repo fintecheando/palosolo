@@ -32,7 +32,7 @@ if(!$gradeEnd){
 <?php $kTeach = get_cookie($cookie_day. "kTeach");?>
 <?php $kTeach = $kTeach?$kTeach:$this->session->userdata("userID");?>
 <div class="lower-school <?php echo $css_class;?>">
-<p><label for="kTeach">Classroom Teacher or Advisor: </label><span id="kTeach-wrapper"><?php echo form_dropdown("kTeach",$teachers,get_cookie($cookie_day . "kTeach"),"id='kTeach'");?></span>
+<p><label for="kTeach">Guia Montessori: </label><span id="kTeach-wrapper"><?php echo form_dropdown("kTeach",$teachers,get_cookie($cookie_day . "kTeach"),"id='kTeach'");?></span>
 </p>
 </div>
 <p>

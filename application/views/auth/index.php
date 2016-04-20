@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title>Narrative Reporting System Login</title>
+<title>Sistema de Administración Escolar - Casa de Los Niños de Palo Solo</title>
 <link href="<?=base_url("/css/main.css");?>" type="text/css" rel="stylesheet" media="all" />
 <link href="<?=base_url("/css/color.css");?>" type="text/css" rel="stylesheet" media="all" />
 
