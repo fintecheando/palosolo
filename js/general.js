@@ -1,4 +1,4 @@
-﻿$(document).ready(function(){
+$(document).ready(function(){
 //	$('#content').css({height:'500px'});
 	$(".refresh").live("click",function(){
 		window.location.reload();
