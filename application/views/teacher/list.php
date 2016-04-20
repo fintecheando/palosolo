@@ -1,7 +1,7 @@
 <?php ?>
-	<h2>Teacher List</h2>
+	<h2>Listado de Profesores</h2>
 	<fieldset class="search_fieldset">
-		<legend>Search Parameters</legend>
+		<legend>Parametro de Busqueda</legend>
 		<?
 if (! empty($options)) {
 
@@ -15,7 +15,7 @@ if (! empty($options)) {
         $value = $values[$i];
         switch ($key) {
             case "showInactive":
-                echo "<li>Show Inactive/Former Users: <strong>Yes</strong></li>";
+                echo "<li>Mostrar todos los usuarios: <strong>Yes</strong></li>";
                 break;
             case "gradeRange":
                     $gradeStart = format_grade($options["gradeRange"]["gradeStart"]);
@@ -41,15 +41,15 @@ if (! empty($options)) {
     }
     echo "</ul>";
 } else {
-    echo "<p>Showing all Users.</p>";
+    echo "<p>Mostrando todos los Usuarios.</p>";
 }
 ?>
 
 		<div class="button-box">
-			<a class="button dialog search" href="<?php echo site_url("teacher/show_search?refine=1");?>">Refine Search</a>
+			<a class="button dialog search" href="<?php echo site_url("teacher/show_search?refine=1");?>">Refinar Busqueda</a>
 		</div>
 	</fieldset>
-	<?=create_button_bar(array(array("text"=>"New User","class"=>"button new dialog","href"=>site_url("teacher/create"),"dbRole"=>1)));?>
+	<?=create_button_bar(array(array("text"=>"Nuevo Usuario","class"=>"button new dialog","href"=>site_url("teacher/create"),"dbRole"=>1)));?>
 
 <? foreach($roles as $role):?>
 <div class="column column-3">

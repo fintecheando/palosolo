@@ -326,31 +326,34 @@ function format_grade_text($number = 0)
 {
 	switch ($number) {
 		case 0 :
-			$output = "Kindergarten";
+			$output = "Kinder";
 			break;
 		case 1 :
-			$output = "First";
+			$output = "Primero";
 			break;
 		case 2 :
-			$output = "Second";
+			$output = "Segundo";
 			break;
 		case 3 :
-			$output = "Third";
+			$output = "Tercero";
 			break;
 		case 4 :
-			$output = "Fourth";
+			$output = "Cuarto";
 			break;
 		case 5 :
-			$output = "Fifth";
+			$output = "Quinto";
 			break;
 		case 6 :
-			$output = "Sixth";
+			$output = "Sexto";
 			break;
 		case 7 :
-			$output = "Seventh";
+			$output = "Primero - Secundaria";
 			break;
 		case 8 :
-			$output = "Eighth";
+			$output = "Segundo - Secundaria";
+			break;
+                case 9 :
+			$output = "Tercero - Secundaria";
 			break;
 	}
 	return $output;

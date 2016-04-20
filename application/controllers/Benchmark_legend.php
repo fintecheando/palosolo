@@ -174,7 +174,7 @@ class benchmark_legend extends MY_Controller {
 				"gradeStart",
 				"gradeEnd" 
 		) );
-		$data ["title"] = "Search Benchmarks";
+		$data ["title"] = "Buscar Registros";
 		$data ["target"] = "benchmark_legend/search";
 		if ($this->input->get ( "ajax" )) {
 			$this->load->view ( $data ["target"], $data );

@@ -522,7 +522,7 @@ class Narrative extends MY_Controller {
 		if (empty ( $data ["narrYear"] )) {
 			$data ["narrYear"] = get_current_year ();
 		}
-		$data ["title"] = "Searching Teacher Narratives";
+		$data ["title"] = "Busqueda de Records por Guia Montessori";
 		$data ["target"] = "narrative/teacher_search";
 		$this->_view ( $data );
 	}
@@ -552,7 +552,7 @@ class Narrative extends MY_Controller {
 				"label" 
 		) );
 		$data ["target"] = "narrative/search_missing";
-		$data ["title"] = "Search for Missing Narratives";
+		$data ["title"] = "Busqueda de Records Incompletos";
 		$this->_view ( $data );
 	}
 

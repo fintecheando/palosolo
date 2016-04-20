@@ -124,7 +124,7 @@ class Assignment extends MY_Controller {
 		$data ['date_range'] ['date_start'] = get_cookie ( 'assignment_date_start' );
 		$data ['date_range'] ['date_end'] = get_cookie ( 'assignment_date_end' );
 		$data ['target'] = 'assignment/search';
-		$data ['title'] = 'Searching for Grades';
+		$data ['title'] = 'Busqueda por Grados';
 		if ($this->input->get ( 'ajax' )) {
 			$this->load->view ( $data ['target'], $data );
 		} else {

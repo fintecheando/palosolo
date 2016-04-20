@@ -9,7 +9,7 @@ if(array_key_exists("grades", $criteria)){
 
 ?>
 
-<fieldset class='search_fieldset'><legend>Showing Student Search Results</legend>
+<fieldset class='search_fieldset'><legend>Resultados de la Busqueda de Estudiantes</legend>
 
 <ul>
 	<li>Year: <strong><?=format_schoolyear($criteria["year"]);?></strong></li>

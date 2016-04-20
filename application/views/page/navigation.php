@@ -44,7 +44,7 @@ $buttons [] = array (
 				"dialog" 
 		),
 		"href" => site_url ( "attendance/show_search" ),
-		"title" => "Search attendance records",
+		"title" => "Buscar Registros de Asistencia",
 		"dbRole" => 1 
 );
 $buttons [] = array (

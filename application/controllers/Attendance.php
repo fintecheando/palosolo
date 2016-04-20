@@ -159,12 +159,12 @@ class Attendance extends MY_Controller {
 		$this->load->model ( "teacher_model", "teacher" );
 		$data ["student"] = NULL;
 		$data ['kStudent'] = $kStudent;
-		$data ['title'] = "Searching Attendance (all students)";
+		$data ['title'] = "Busqueda de Asistencias (todos los estudiantes)";
 		if ($kStudent) {
 			$data ["kStudent"] = $kStudent;
 			$this->load->model ( "student_model" );
 			$data ["student"] = $this->student_model->get_name ( $kStudent );
-			$data ['title'] = sprintf ( "Searching attendance for %s", $data ['student'] );
+			$data ['title'] = sprintf ( "Busqueda de asistencia para %s", $data ['student'] );
 		}
 		$attendList = $this->menu_model->get_pairs ( "attendance" );
 		$data ["attendTypes"] = get_keyed_pairs ( $attendList, array (
@@ -236,7 +236,7 @@ class Attendance extends MY_Controller {
 		}
 		// @TODO add a line displaying the search query
 		
-		$data ["title"] = sprintf ( "Attendance Search Results: %s", format_date_range ( $startDate, $endDate ) );
+		$data ["title"] = sprintf ( "Resultados de la Busqueda de Asistencia: %s", format_date_range ( $startDate, $endDate ) );
 		$data ["target"] = "attendance/list";
 		$data ["action"] = "search";
 		$this->load->view ( "page/index", $data );
@@ -270,7 +270,7 @@ class Attendance extends MY_Controller {
 					"teacher" 
 			), TRUE );
 			$data ['target'] = "attendance/checklist/search";
-			$data ['title'] = "Check Attendance";
+			$data ['title'] = "Revisar Asistencia";
 			if ($this->input->get ( "ajax" ) == 1) {
 				$this->load->view ( $data ['target'], $data );
 			} else {

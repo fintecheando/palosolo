@@ -29,7 +29,7 @@
 	?>
 
 	<div class="button-box">
-		<a class="button log_search">Refine Search</a>
+		<a class="button log_search">Refinar Busqueda</a>
 	</div>
 </fieldset>
 <?

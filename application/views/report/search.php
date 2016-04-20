@@ -18,6 +18,6 @@ $date_end = get_cookie("date_end");
 <?=form_dropdown("category",$categories,"","id='category'");?>
 
 <div class='button-box'>
-<input type="submit" class="button" value="Search"/>
+<input type="submit" class="button" value="Buscar"/>
 </div>
 </form>

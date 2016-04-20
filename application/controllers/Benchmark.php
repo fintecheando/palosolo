@@ -39,7 +39,7 @@ class Benchmark extends MY_Controller {
 		$data ["gradeStart"] = $teacher->gradeStart;
 		$data ["gradeEnd"] = $teacher->gradeEnd;
 		$data ['target'] = "benchmark/search";
-		$data ['title'] = "Searching Benchmarks";
+		$data ['title'] = "Busqueda de Registros";
 		if ($this->input->get ( "ajax" )) {
 			$this->load->view ( $data ['target'], $data );
 		} else {

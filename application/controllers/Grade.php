@@ -269,7 +269,7 @@
 						"subject",
 						"subject" 
 				), TRUE );
-				$data ["title"] = "Search For Grades for $student";
+				$data ["title"] = "Buscar grados para el Estudiante $student";
 				$data ["target"] = "grade/selector";
 				if ($this->input->get ( "ajax" )) {
 					$this->load->view ( $data ["target"], $data );

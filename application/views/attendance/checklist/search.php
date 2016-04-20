@@ -16,17 +16,17 @@ if(!$gradeEnd){
 
 ?>
 <h2><?php echo $title;?></h2>
-<p>Enter the grade range and select the appropriate values as needed.</p>
+<p>Ingresa el rango de grados y selecciona los valores requeridos.</p>
 <form id='attendance-check' name='attendance-check' action='<?=site_url("attendance/check");?>' method='get'>
-<p><label for='date'>Date: </label><input type='date' id='date' name='date' value='<?php echo date("Y-m-d");?>' required/></p>
-<p><label for='gradeStart'>Grade Range: </label><input type="text" name="gradeStart" id="gradeStart" class="grade" value="<?php echo $gradeStart; ?>" required/>-
+<p><label for='date'>Fecha: </label><input type='date' id='date' name='date' value='<?php echo date("Y-m-d");?>' required/></p>
+<p><label for='gradeStart'>Rango de Grados: </label><input type="text" name="gradeStart" id="gradeStart" class="grade" value="<?php echo $gradeStart; ?>" required/>-
 <input type="text" name="gradeEnd"  class="grade" id="gradeEnd" value="<?php echo $gradeEnd;?>" required/></p>
 <?php $css_class = !get_cookie($cookie_day . "kTeach") && (get_cookie($cookie_day . "humanitiesTeacher") || get_cookie($cookie_day. "stuGroup"))?"visible":"hidden";?>
 <div class="middle-school <?php echo $css_class;?>">
-<p class="humanities-teacher"><label for="humanitiesTeacher">Humanities Teacher: </label><?php echo form_dropdown("humanitiesTeacher",$humanities_teachers,get_cookie($cookie_day . "humanitiesTeacher"),"id='humanitiesTeacher'");?>
+<p class="humanities-teacher"><label for="humanitiesTeacher">Profesor de Humanidades: </label><?php echo form_dropdown("humanitiesTeacher",$humanities_teachers,get_cookie($cookie_day . "humanitiesTeacher"),"id='humanitiesTeacher'");?>
 </p>
 <p>-OR-</p>
-<p><label for="stuGroup">Middle School Student Group: </label><?php echo form_dropdown("stuGroup",$stuGroup,get_cookie($cookie_day . "stuGroup"),"id='stuGroup'");?></p>
+<p><label for="stuGroup">Grupo de Estudiantes de Secundaria: </label><?php echo form_dropdown("stuGroup",$stuGroup,get_cookie($cookie_day . "stuGroup"),"id='stuGroup'");?></p>
 </div>
 <?php $css_class = get_cookie($cookie_day. "kTeach" ) || ($lowerschool && $teacher->gradeStart < 5 && $teacher->gradeStart !=0) ?"visible":"hidden";?>
 <?php $kTeach = get_cookie($cookie_day. "kTeach");?>
