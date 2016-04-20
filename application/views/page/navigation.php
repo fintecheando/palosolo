@@ -16,29 +16,29 @@ if ($unread_reports > 0) {
 	if ($unread_reports > 1) {
 		$plural = "s";
 	}
-	$count_text = sprintf ( "(You have %s unread report%s.)", $unread_reports, $plural );
+	$count_text = sprintf ( "(Tienes %s  reporte%s sin leer.)", $unread_reports, $plural );
 }
 $term = get_current_term ();
 $year = get_current_year ();
 $buttons [] = array (
 		"selection" => "home",
-		"text" => "Home",
+		"text" => "Inicio",
 		"href" => site_url () 
 );
 $buttons [] = array (
 		"selection" => "search",
-		"text" => '<input type="text" id="stuSearch" name="stuSearch" class="mobile" size="20" value="find students" />',
+		"text" => '<input type="text" id="stuSearch" name="stuSearch" class="mobile" size="20" value="Buscar Estudiante" />',
 		"type" => "pass-through" 
 );
 $buttons [] = array (
 		"selection" => "attendance",
-		"text" => "Check Attendance",
+		"text" => "Revisar Asistencia",
 		"class" => "search button dialog mobile",
 		"href" => site_url ( "attendance/check?search=1" ) 
 );
 $buttons [] = array (
 		"selection" => "attendance",
-		"text" => "Search Attendance",
+		"text" => "Buscar Asistencias",
 		"class" => array (
 				"button",
 				"dialog" 
@@ -49,45 +49,45 @@ $buttons [] = array (
 );
 $buttons [] = array (
 		"selection" => "student",
-		"text" => "New Student",
+		"text" => "Nuevo Estudiante",
 		"class" => array (
 				"button",
 				"new",
 				"dialog" 
 		),
 		"href" => site_url ( "student/create" ),
-		"title" => "Add a new student to the database",
+		"title" => "Agregar un nuevo Estudiante a la Base de Datos",
 		"dbRole" => 1 
 );
 $buttons [] = array (
 		"selection" => "teacher",
-		"text" => "List Teachers",
+		"text" => "Listar Guias Montessori",
 		"href" => site_url ( "teacher?gradeStart=0&gradeEnd=8" ),
 		"title" => "List all the teachers &amp; other users in the database",
 		"dbRole" => 1 
 );
 $buttons [] = array (
 		"selection" => "narrative",
-		"text" => "Narrative Search &amp; Replace",
+		"text" => "Buscar Records &amp; Actualizar",
 		"href" => site_url ( "narrative/search" ),
-		"title" => "Search &amp; Replace Narrative Text",
+		"title" => "Busqueda &amp; Actualización de Records",
 		"dbRole"=>1,
 );
 $buttons [] = array (
 		"selection" => "support",
-		"text" => "Learning Support",
+		"text" => "Apoyo al Aprendizaje",
 		"href" => site_url ( "student/search?hasNeeds=1&year=" . get_current_year () ),
 		"dbRole" => 3 
 );
 $buttons [] = array (
 		"selection" => "template",
-		"text" => "Subject Templates",
+		"text" => "Plantillas de Temas",
 		"href" => site_url ( "template/list_templates/?kTeach=$userID&term=$term&year=$year" ),
 		"dbRole" => 2 
 );
 $buttons [] = array (
 		"selection" => "benchmark",
-		"text" => "Benchmarks",
+		"text" => "Evaluaciones",
 		"class" => array (
 				"button",
 				"dialog" 
@@ -97,24 +97,24 @@ $buttons [] = array (
 );
 $buttons [] = array (
 		"selection" => "narrative/teacher_list",
-		"text" => "Current Narratives",
+		"text" => "Records Actuales",
 		"class" => array (
 				"button",
 				"dialog" 
 		),
 		"href" => site_url ( "narrative/search_teacher_narratives/$userID" ),
-		"title" => "List all of your narratives",
+		"title" => "Muestra todos los Records Actuales",
 		"dbRole" => 2 
 );
 $buttons [] = array (
 		"selection" => "narrative/show_missing",
-		"text" => "Missing Narratives",
+		"text" => "Records Pendientes",
 		"class" => array (
 				"button",
 				"dialog" 
 		),
 		"href" => site_url ( "narrative/search_missing/$userID" ),
-		"title" => "Show the students for whom you have not yet written a report this term",
+		"title" => "Muestra los Estudiantes que aun tienen Records pendientes",
 		"dbRole" => 2 
 );
 if ($dbRole == 2) {
@@ -123,26 +123,26 @@ if ($dbRole == 2) {
 				"selection" => "report/get_list",
 				"text" => sprintf ( "%ss%s", STUDENT_REPORT, $count ),
 				"href" => site_url ( "report/get_list/advisor/$userID" ),
-				"title" => sprintf ( "Show your %ss %s", strtolower ( STUDENT_REPORT ), $count_text ) 
+				"title" => sprintf ( "Mostrar los %ss %s", strtolower ( STUDENT_REPORT ), $count_text ) 
 		);
 	}
 	if ($gradeEnd > 4) {
 		$buttons [] = array (
 				"selection" => "assignment",
-				"text" => "Grades",
+				"text" => "Grados",
 				"class" => array (
 						"button",
 						"dialog" 
 				),
 				"id" => "sa_$userID",
-				"title" => "Search for current grade charts",
+				"title" => "Buscar por graficas actuales de Grados",
 				"href" => site_url ( "assignment/search/$userID" ) 
 		);
 	}
 	
 	$buttons [] = array (
 			"selection" => "student",
-			"text" => "List Students",
+			"text" => "Listar Estudiantes",
 			"href" => site_url ( "student/search?kTeach=$userID&year=" . get_current_year () ) 
 	);
 }
