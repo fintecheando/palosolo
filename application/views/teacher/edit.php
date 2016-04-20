@@ -9,23 +9,23 @@ if($isAdvisor){
 ?>
 
 <form id="teacher_edit" action="<?=site_url("teacher/$action");?>" method="post" name="teacher_edit">
-<fieldset><legend>General Info</legend>
+<fieldset><legend>Información General</legend>
 <input type="hidden" id="kTeach" name="kTeach" value="<?=get_value($teacher,'kTeach');?>"/>
-<p><label for="teachFirst">First Name</label>
+<p><label for="teachFirst">Nombre(s)</label>
 <input type="text" id="teachFirst" class="required" name="teachFirst" value="<?=get_value($teacher,'teachFirst');?>"/>
 </p><p>
-<label for="teachLast">Last Name</label>
+<label for="teachLast">Apellido Paterno</label>
 <input type="text" id="teachLast" class="required" name="teachLast" value="<?=get_value($teacher,'teachLast');?>"/>
 </p>
 
 <?php if($this->session->userdata("dbRole") == 1 || $this->session->userdata("userID") == get_value($teacher,'kTeach',0)):?>
 <p>
-<label for="username">Username</label>
+<label for="username">Nombre de Usuario</label>
 <input type="text" id="username" class="required" name="username" value="<?=get_value($teacher, 'username');?>"/>
 </p>
 <?php endif;?>
 <p>
-<label for="email">Email Address</label>
+<label for="email">Dirección de E-mail</label>
 <input type="text" id="email" class="required" name="email" value="<?=get_value($teacher, 'email');?>" />
 </p>
 
@@ -39,16 +39,16 @@ if($isAdvisor){
 }?>
 
 <? if(get_value($teacher,"dbRole",NULL) == 2):?>
-<label for="isAdvisor">Is a Middle School Advisor: </label>
+<label for="isAdvisor">Es supervisor: </label>
 <input type="checkbox" name="isAdvisor" id="isAdvisor" value="1" <?=$advisor_checked;?>/>
 <?endif;?>
 </fieldset>
 
 <?php  if(get_value($teacher, "dbRole",NULL) >= 2):?>
-<fieldset><legend>Classroom Information</legend>
+<fieldset><legend>Información del Salón de Clases</legend>
 <?php if(get_value($teacher,"dbRole",NULL)==2):?>
 
-	<p><label for='teachClass'>Classroom</label> 
+	<p><label for='teachClass'>Salon de Clases</label> 
 	<?=form_dropdown('teachClass', $classrooms, get_value($teacher, 'teachClass'), 'id="teachClass"');?></p>
 	<?php endif;?>
 	<fieldset><legend>Range of Grades Taught</legend>
